@@ -23,11 +23,17 @@ class CairoPackage (CairoGraphicsXzPackage):
 
         if Package.profile.name == 'darwin':
             self.configure_flags.extend([
-                '--enable-quartz',
-                '--enable-quartz-font',
-                '--enable-quartz-image',
-                '--disable-xlib',
-                '--without-x'
+                #'--enable-quartz',
+                #'--enable-quartz-font',
+                #'--enable-quartz-image',
+                #'--disable-xlib',
+                #'--without-x'
+                '--disable-quartz',
+                '--with-x',
+                '--enable-xlib',
+                '--enable-xlib-xrender',
+                '--enable-xcb',
+                '--enable-xcb-shm',
             ])
         elif Package.profile.name == 'linux':
             self.configure_flags.extend([

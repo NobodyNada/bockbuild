@@ -35,7 +35,10 @@ class UnixProfile (Profile):
                      '%{staged_prefix}/lib/pkgconfig',
                      '%{staged_prefix}/share/pkgconfig',
                      '%{toolchain_root}/lib/pkgconfig',
-                     '%{toolchain_root}/share/pkgconfig')
+                     '%{toolchain_root}/share/pkgconfig',
+                     '/usr/local/Cellar/harfbuzz/0.9.41/lib/pkgconfig/',
+                     '/opt/x11/lib/pkgconfig/'
+                     )
 
         self.env.set('XDG_CONFIG_DIRS', '%{staged_prefix}/etc/xdg')
         self.env.set('XDG_DATA_DIRS',   '%{staged_prefix}/share')
